@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sceens/Assets/PlanterBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Planter_Planter.gd" type="Script" id=2]
+
+[node name="Planter_Planter" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlanterBox" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 0 )
+
+[node name="PlanterBox2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -128, 0 )

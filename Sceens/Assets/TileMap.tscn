@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tiles/Tiles.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 32 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Ground" type="Node" parent="."]
+
+[node name="Ground" type="Sprite" parent="Ground"]
+position = Vector2( 128, 32 )
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground/Ground"]
+position = Vector2( 3.8147e-06, 3.8147e-06 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Ground/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Background"]
+position = Vector2( 384, 32 )
+texture = ExtResource( 2 )
+hframes = 2
+frame = 1

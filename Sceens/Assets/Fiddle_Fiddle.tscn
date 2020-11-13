@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sceens/Assets/FiddleLeaf.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Fiddle_Fiddle.gd" type="Script" id=2]
+
+[node name="Fiddle_Fiddle" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FiddleLeaf" parent="." instance=ExtResource( 1 )]
+position = Vector2( -64, 0 )
+
+[node name="FiddleLeaf2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+[connection signal="grass_entered" from="FiddleLeaf" to="." method="_on_FiddleLeaf_grass_entered"]
+[connection signal="grass_exited" from="FiddleLeaf" to="." method="_on_FiddleLeaf_grass_exited"]
+[connection signal="grass_entered" from="FiddleLeaf2" to="." method="_on_FiddleLeaf_grass_entered"]
+[connection signal="grass_exited" from="FiddleLeaf2" to="." method="_on_FiddleLeaf_grass_exited"]
