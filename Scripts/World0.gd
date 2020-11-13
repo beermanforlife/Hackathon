@@ -21,6 +21,7 @@ var scene_chair_desk = load("res://Sceens/Assets/Chair_Desk.tscn")
 var scene_planter_planter = load("res://Sceens/Assets/Planter_Planter.tscn")
 var scene_shuffle = load("res://Sceens/Assets/ShuffleBoard.tscn")
 var scene_kitchen = load("res://Sceens/Assets/Kitchen.tscn")
+var scene_robot = load("res://Sceens/Assets/Robot.tscn")
 # Called when the node enters the scene tree for the first time.
 # Moves to Vector(0,0) at a speed of 1 unit per second
 var speed = 200 # Change this to increase it to more units/second
@@ -37,7 +38,7 @@ func _physics_process(delta):
 
 func spawn_new_item():
 	randomize()
-	var spawn_seed = int(rand_range(0, 9))
+	var spawn_seed = int(rand_range(0, 10))
 	print(spawn_seed)
 	var spawned
 	if spawn_seed == 0:
@@ -58,6 +59,8 @@ func spawn_new_item():
 		spawned = scene_shuffle.instance()
 	elif spawn_seed == 8:
 		spawned = scene_kitchen.instance()
+	elif spawn_seed == 9:
+		spawned = scene_robot.instance()	
 	spawned.position.x = spawn_point.position.x
 	spawned.position.y = spawn_point.position.y
 	spawned.increse_speed(speedModifyer)
