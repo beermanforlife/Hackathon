@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/12barsblues_practice.ogg-7835402360e017b0b3ec6cea6a4756ce.oggstr"
+
+[deps]
+
+source_file="res://12barsblues_practice.ogg"
+dest_files=[ "res://.import/12barsblues_practice.ogg-7835402360e017b0b3ec6cea6a4756ce.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

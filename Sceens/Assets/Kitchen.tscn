@@ -15,6 +15,7 @@ extents = Vector2( 145.47, 55.4189 )
 
 [node name="Kitchen" type="KinematicBody2D"]
 position = Vector2( -1400, -144.755 )
+scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true

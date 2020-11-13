@@ -36,7 +36,8 @@ func _physics_process(delta):
 			window.position.x = spawn_point.position.x
 
 func spawn_new_item():
-	var spawn_seed = int(rand_range(0, 8))
+	randomize()
+	var spawn_seed = int(rand_range(0, 9))
 	print(spawn_seed)
 	var spawned
 	if spawn_seed == 0:
@@ -105,6 +106,7 @@ func _on_Start_button_up():
 	gameStarted = true
 	get_node("Picker").hide()
 	timer.paused = false
+	spawn_new_item()
 
 
 func _on_Button_button_up():
